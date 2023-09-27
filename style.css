@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mooli&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #161616;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  height: 500px;
+
+  border-radius: 6px;
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.questions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answers-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.answer:disabled {
+  cursor: not-allowed;
+}
+
+.next-question {
+  margin-top: 32px;
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+}
+
+.start-quiz {
+  background-color: transparent;
+  border: none;
+  font-size: 4em;
+  color: white;
+}
+
+.start-quiz:hover {
+  color: #f76618;
+}
+
+.button {
+  background-color: #f76618;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  min-height: 48px;
+  padding: 10px 32px;
+
+  transition: filter 0.1s;
+}
+
+.button:not(:disabled):hover {
+  filter: brightness(0.8);
+}
+
+/* Finish game */
+.final-message {
+  font-size: 20px;
+  text-align: center;
+}
+
+.final-message span {
+  display: block;
+  margin-top: 8px;
+}
+
+/* General styles */
+.hide {
+  display: none;
+}
+
+.correct {
+  background-color: #049b48;
+}
+
+.incorrect {
+  background-color: #a10101;
+}
+
+#score {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.subjects {
+  font-size: 2em;
+}
+
+#image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+/************************************/
+.heart {
+  margin: 10px;
+  background-color: red;
+  height: 15px;
+  transform: rotate(-45deg);
+  width: 15px;
+  position: relative;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: 15px;
+  position: absolute;
+  width: 15px;
+}
+
+.heart:before {
+  top: -8px;
+}
+
+.heart:after {
+  left: 8px;
+}
